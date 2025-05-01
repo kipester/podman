@@ -23,5 +23,11 @@ After that for rootless to work run:
 cd podman && chmod +x setup.sh  &&  ./setup.sh
 
 If you want to autostart specific container after reboot you can find user specific systemd file
-under every service which have a compose.yaml file. You have to save or move that file service users home folder under
-.config/systemd/user/
+under every service which have a compose.yaml file. You have to save or move that file service users home folder under e.g
+.config/systemd/user/example.service
+
+And after that:
+
+systemctl --user enable example.service && systemctl --user start example.service
+
+After that you can use normal systemctl --user commads to stop|start|restart|status to manage container service
