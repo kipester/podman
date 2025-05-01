@@ -15,7 +15,7 @@ export XDG_RUNTIME_DIR=/run/user/$UID
 
 export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
 
-or to make it permanet add above lines to users .bashrc file in home folder
+or to make it permanent add above lines to users .bashrc file in home folder
 
 If you clone this repo with git clone https://github.com/kipester/podman.git
 
