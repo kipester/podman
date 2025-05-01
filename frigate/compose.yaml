@@ -1,0 +1,22 @@
+services:
+  frigate:
+    container_name: frigate
+    environment:
+      - PUID=${user}
+      - PGID=${user}
+      - TZ=Europe/Helsinki
+    restart: unless-stopped
+    image: ghcr.io/blakeblackshear/frigate:stable
+    shm_size: "256mb"
+    volumes:
+      - ${HOME}/frigate/conf:/config
+      - ${HOME}/frigate/media:/media/frigate
+      - type: tmpfs # Optional: 1GB of memory, reduces SSD/SD Card wear
+        target: /tmp/cache
+        tmpfs:
+          size: 1000000000
+    ports:
+      - "8971:8971" # WEB ui
+      - "8555:8555" # webRTC
+      - "8554:8554" # RTSP feeds
+      - "5000:5000" # Only for local trusted login
