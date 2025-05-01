@@ -22,7 +22,7 @@ services:
       - /var/lib/libvirt/images:/var/lib/libvirt/images
 
     # If connecting to remote libvirtd, substitute location of ssh private key, e.g.:
-      - /home/kimmo/.ssh:/root/.ssh:ro
+      - /home/$user/.ssh:/root/.ssh:ro
     devices:
     # Not needed if connecting to remote libvirtd
       - /dev/kvm:/dev/kvm
