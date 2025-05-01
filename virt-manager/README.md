@@ -34,6 +34,16 @@ podman-compose up -d
 ```
 Now you can login with default username(admin) and password(admin) from Virt-manager WebUi which is http://host-ip:8185
 
+To add hosts you have to login into container 
+```
+podman exec -ti virtlyst /bin/sh
+```
+And create ssh-keys
+```
+ssh-keygen -t ed25519
+```
+And then copy and save sshkeys to hosts libvirtd user .ssh/authorized_keys file
+
 If you want to autostart container after reboot you can copy and save  virtmanager.service file under /home/virtmanager/.config/systemd/user/virtmanager.service
 
 And after that:
