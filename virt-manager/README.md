@@ -29,6 +29,10 @@ And after that you can build Virt-manager which is based Broadway-base image
 ```
 podman build -t virt-manager:latest .
 ```
+Copy compose example from here https://github.com/kipester/podman/blob/main/virt-manager/compose.yaml
+
+Make your own modifications and then:
+
 ```
 podman-compose up -d
 ```
