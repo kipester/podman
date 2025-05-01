@@ -3,3 +3,25 @@ https://github.com/cutelyst/Virtlyst
 
 Nice and clean, but works only on localhost because of issue:
 https://github.com/cutelyst/Virtlyst/issues/62
+
+First create user virtlyst and under as root or sudo run "loginctl enable-linger virtlyst" and after that "su virtlyst"
+
+And in virtlyst's home folder commands:
+
+export XDG_RUNTIME_DIR=/run/user/$UID
+
+export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
+
+or to make it permanent add above lines to users .bashrc file in home folder and reboot or run source .bashrc
+
+After that for rootless to work copy setup.sh file virtlyst's home folder and run:
+
+chmod +x setup.sh && ./setup.sh
+
+If you want to autostart container after reboot you can copy and save  virtlyst.service file under /home/virtmanager/.config/systemd/user/virtlyst.service
+
+And after that:
+
+systemctl --user enable virtlyst.service && systemctl --user start virtlyst.service
+
+After that you can use normal systemctl --user commads to stop|start|restart|status to manage and/or check container service
