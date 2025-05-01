@@ -3,7 +3,13 @@ https://github.com/cutelyst/Virtlyst
 
 ![Instances](https://github.com/kipester/podman/blob/main/virtlyst/virtlyst-screenshots/virtlyst-1.png)
 
-Nice and clean, but works only on localhost because of issue:
+![Instances](https://github.com/kipester/podman/blob/main/virtlyst/virtlyst-screenshots/virtlyst-2.png)
+
+![Instances](https://github.com/kipester/podman/blob/main/virtlyst/virtlyst-screenshots/virtlyst-3.png)
+
+
+
+Nice and clean, but works only on localhost or all managed hosts has to be up because of issue:
 https://github.com/cutelyst/Virtlyst/issues/62
 
 Quick start:
