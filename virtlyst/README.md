@@ -19,7 +19,7 @@ And in virtlyst's home folder commands:
 export XDG_RUNTIME_DIR=/run/user/$UID
 export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
 ```
-or to make it permanent add above lines to users .bashrc file in home folder and reboot or run source .bashrc
+or to make it permanent add above lines to virtlyst user .bashrc file in home folder and reboot or run source .bashrc
 
 After that for rootless to work copy setup.sh file virtlyst's home folder and run:
 ```
