@@ -4,12 +4,12 @@ https://github.com/m-bers/docker-virt-manager
 First create user virtmanager and under as root or sudo run 
 ```shell
 loginctl enable-linger virtmanager
-...
-
+```
 
 ```shell
 su virtmanager
-...
+```
+
 And in virtmanager's home folder commands:
 
 export XDG_RUNTIME_DIR=/run/user/$UID
