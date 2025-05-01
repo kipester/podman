@@ -40,6 +40,10 @@ And after that you can build Virtlyst which is based Cutelyst image
 ```
 podman build -t virtlyst:latest .
 ```
+Copy compose example from here https://github.com/kipester/podman/blob/main/virtlyst/compose.yaml
+
+Make your own modifications and then:
+
 ```
 podman-compose up -d
 ```
