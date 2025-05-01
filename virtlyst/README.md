@@ -6,8 +6,12 @@ https://github.com/cutelyst/Virtlyst/issues/62
 
 Quick start:
 
-Create user virtlyst and under as root or sudo run "loginctl enable-linger virtlyst" and after that "su virtlyst"
+Create user virtlyst and under as root or sudo run 
 
+loginctl enable-linger virtlyst
+```
+su virtlyst
+```
 And in virtlyst's home folder commands:
 
 export XDG_RUNTIME_DIR=/run/user/$UID
