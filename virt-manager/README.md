@@ -15,7 +15,7 @@ After that for rootless to work copy setup.sh file virtmanager's home folder and
 
 chmod +x setup.sh && ./setup.sh
 
-If you want to autostart container after reboot you can save  virtmanager.service file under /home/virtmanager/.config/systemd/user/virtmanager.service
+If you want to autostart container after reboot you can copy and save  virtmanager.service file under /home/virtmanager/.config/systemd/user/virtmanager.service
 
 And after that:
 
