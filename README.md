@@ -9,4 +9,6 @@ Almost every compose.yaml and Containerfile needs to be modified users own needs
 
 For rootless to work run:
 
+chmod +x setup.sh
+
 ./setup.sh
