@@ -35,6 +35,8 @@ podman build -t virtlyst:latest .
 ```
 podman-compose up -d
 ```
+Now you can login with default username(admin) and password(admin) from Virtlyst WebUi which is http://<host-ip>:8080
+
 If you want to autostart container after reboot you can copy and save  virtlyst.service file under /home/virtmanager/.config/systemd/user/virtlyst.service
 
 And after that:
