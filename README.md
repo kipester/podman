@@ -12,6 +12,7 @@ These containers are ment to use as service specific user (e.g. virtlyst runs un
 So first create user for container and after that in service users homefolder run:
 
 export XDG_RUNTIME_DIR=/run/user/$UID
+
 export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
 
 or to make it permanet add above lines to users .bashrc file in home folder
