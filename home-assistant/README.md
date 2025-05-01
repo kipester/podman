@@ -21,7 +21,7 @@ After that for rootless to work copy setup.sh file hass's home folder and run:
 ```
 chmod +x setup.sh && ./setup.sh
 ```
-Copy compose example from here https://github.com/kipester/podman/blob/main/virtlyst/compose.yaml
+Copy compose example from here https://github.com/kipester/podman/blob/main/home-assistant/compose.yaml
 
 Make your own modifications and then:
 
