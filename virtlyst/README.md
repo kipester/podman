@@ -4,7 +4,9 @@ https://github.com/cutelyst/Virtlyst
 Nice and clean, but works only on localhost because of issue:
 https://github.com/cutelyst/Virtlyst/issues/62
 
-First create user virtlyst and under as root or sudo run "loginctl enable-linger virtlyst" and after that "su virtlyst"
+Quick start:
+
+Create user virtlyst and under as root or sudo run "loginctl enable-linger virtlyst" and after that "su virtlyst"
 
 And in virtlyst's home folder commands:
 
@@ -17,6 +19,10 @@ or to make it permanent add above lines to users .bashrc file in home folder and
 After that for rootless to work copy setup.sh file virtlyst's home folder and run:
 
 chmod +x setup.sh && ./setup.sh
+
+podman build -t virtlyst:latest .
+
+podman-compose up -d
 
 If you want to autostart container after reboot you can copy and save  virtlyst.service file under /home/virtmanager/.config/systemd/user/virtlyst.service
 
