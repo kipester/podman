@@ -1,0 +1,11 @@
+services:
+  virtlyst:
+    image: localhost/virtlyst:latest
+    container_name: virtlyst
+    volumes:
+      - /${HOME}/virtlyst:/root
+      - /run/libvirt:/run/libvirt:rw
+      - /dev/kvm:/dev/kvm
+    restart: always
+    ports:
+      - "8080:80"
