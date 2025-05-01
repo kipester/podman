@@ -25,6 +25,8 @@ After that for rootless to work copy setup.sh file virtlyst's home folder and ru
 ```
 chmod +x setup.sh && ./setup.sh
 ```
+First you have to build Cutelyst, for example here: https://github.com/kipester/podman/tree/main/cutelyst5
+
 ```
 podman build -t virtlyst:latest .
 ```
