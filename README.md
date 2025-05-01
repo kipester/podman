@@ -1,4 +1,8 @@
 # Rootless Podman 
 Mainly rootless podman containers for different services.
 
-All instuctions all under service specific folder
+If there is instuctions, they are under service specific folder.
+
+If you don't know nothing about Linux, podman, cli etc. Don't try these at home.
+
+Almost every compose.yaml and Containerfile needs to be modified users own needs.
