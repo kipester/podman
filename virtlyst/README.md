@@ -27,6 +27,8 @@ chmod +x setup.sh && ./setup.sh
 ```
 First you have to build Cutelyst, for example here: https://github.com/kipester/podman/tree/main/cutelyst5
 
+And after that you can build Virtlyst which is based Cutelyst image
+
 ```
 podman build -t virtlyst:latest .
 ```
