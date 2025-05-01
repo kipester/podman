@@ -9,7 +9,7 @@ Almost every compose.yaml and Containerfile needs to be modified users own needs
 
 These containers are ment to use as service specific user (e.g. virtlyst runs under user virtlyst)
 
-So first create user for container and after that in service users homefolder run:
+So first create user for container and uder as root or sudo run "loginctl enable-linger $UID" and after that in service users homefolder run:
 
 export XDG_RUNTIME_DIR=/run/user/$UID
 
