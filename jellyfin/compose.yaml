@@ -1,0 +1,15 @@
+services:
+  # jellyfin is used to serve your media to the client devices
+  jellyfin:
+    image: docker.io/jellyfin/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=user_id
+      - PGID=user_id
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /home/jellyfin/media/:/data
+      - /home/jellyfin/config:/config
+    ports:
+      - 8096:8096
+    restart: unless-stopped
