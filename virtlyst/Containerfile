@@ -5,8 +5,8 @@ RUN set -ex && \
     apk add openssh libvirt qt6-qtbase qt6-qtdeclarative qt6-qtbase-sqlite && \
     rm -rf /var/cache/apk
 
-COPY --from=hammerbox.lan:5999/cutelyst:14.4.1 /usr/local /usr/local
-COPY --from=hammerbox.lan:5999/cutelyst:14.4.1 /root/src/root /var/www/root
-COPY --from=hammerbox.lan:5999/cutelyst:14.4.1 /root/src/build/src/libVirtlyst.so /usr/local/lib
+COPY --from=localhost/cutelyst:latest /usr/local /usr/local
+COPY --from=localhost/cutelyst:latest /root/src/root /var/www/root
+COPY --from=localhost/cutelyst:latest /root/src/build/src/libVirtlyst.so /usr/local/lib
 
 CMD ["cutelystd4-qt6", "--application", "/usr/local/lib/libVirtlyst.so", "--chdir2", "/var/www", "--static-map", "/static=root/static", "--http-socket", "80", "--master", "--using-frontend-proxy"]
