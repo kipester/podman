@@ -10,7 +10,7 @@ services:
       DARK_MODE: false 
     # If connecting to remote libvirtd, you can use a qemu+ssh string like below. Default qemu:///system will connect to local libvirtd: 
     # HOSTS: "['qemu+ssh://user@host1/system', 'qemu+ssh://user@host2/system']"
-      HOSTS: ['qemu:///system', 'qemu+ssh://$user@unicorn/system', 'qemu+ssh://$user@iMac/system']
+      HOSTS: ['qemu:///system', 'qemu+ssh://$user@host1/system', 'qemu+ssh://$user@host2/system']
 
     # If on an Ubuntu host (or any host with the libvirt AppArmor policy, you will need to use an ssh connection to localhost
     # or use qemu:///system and uncomment the below line to run the container in privileged mode: 
